@@ -1,0 +1,15 @@
+// actual overloading;
+function sendMessage(content: string): void;
+function sendMessage(content: { html: string }): void;
+
+function sendMessage(content: string | { html: string }): void {
+  if (typeof content === "string") {
+    console.log("Sending text message:", content);
+  } else {
+    console.log("Sending HTML message:", content.html);
+  }
+}
+
+// Usage examples
+sendMessage("Hello, world!"); // Sends a text message
+sendMessage({ html: "<p>Hello, world!</p>" }); // Sends an HTML message
