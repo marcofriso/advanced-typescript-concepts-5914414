@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "npx tsc --project tsconfig.json",
+    "dev": "node dist/main.js"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.2",
+    "typescript": "^5.9.3"
+  }
+}
